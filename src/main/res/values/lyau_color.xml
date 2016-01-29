@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="lyau_content_background">#f8f8f8</color>
+    <color name="lyau_pencil_2b_color">#40484D</color>
+    <color name="lyau_pencil_color">#717272</color>
+    <color name="lyau_text_color">#717272</color>
+    <color name="lyau_shadow_start_level_1">#40000000</color>
+    <color name="lyau_shadow_center_level_1">#000000</color>
+    <color name="lyau_shadow_end_level_1">#50000000</color>
+    <color name="lyau_green">#118F77</color>
+    <color name="lyau_blue">#427FED</color>
+    <color name="lyau_red">#A52714</color>
+    <color name="lyau_grey">#cccccc</color>
+    <color name="lyau_translucence">#30000000</color>
+    <color name="lyau_cream">#F1F1F1</color>
+    <color name="lyau_text_like_counter">#2b5a83</color>
+    <color name="lyau_transparent">#00000000</color>
+    <!-- design -->
+    <color name="lyau_window_background">#d0d5df</color>
+
+</resources>
