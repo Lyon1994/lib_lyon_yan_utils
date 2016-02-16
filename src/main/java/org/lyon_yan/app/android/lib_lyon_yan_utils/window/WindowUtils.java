@@ -1,7 +1,6 @@
 package org.lyon_yan.app.android.lib_lyon_yan_utils.window;
 
-import java.lang.reflect.Field;
-
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -10,6 +9,8 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.view.Display;
 import android.view.WindowManager;
+
+import java.lang.reflect.Field;
 
 /**
  * Created by froger_mcs on 05.11.14.
@@ -22,6 +23,7 @@ public class WindowUtils {
 		return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
 	}
 
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
 	public static int getScreenHeight(Context c) {
 		if (screenHeight == 0) {
 			WindowManager wm = (WindowManager) c
@@ -35,6 +37,7 @@ public class WindowUtils {
 		return screenHeight;
 	}
 
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
 	public static int getScreenWidth(Context c) {
 		if (screenWidth == 0) {
 			WindowManager wm = (WindowManager) c

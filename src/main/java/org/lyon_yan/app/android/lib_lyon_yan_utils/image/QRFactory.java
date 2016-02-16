@@ -14,9 +14,17 @@ import java.util.Hashtable;
  * Created by Lyon_Yan on 2015/4/1 0001.
  */
 public class QRFactory {
-    private static final int BLACK = 0xff000000;
+    private static final int DEFAULT_QRCODE_COLOR = 0xff000000;
 
-    public static Bitmap createQRCode(String str, int widthAndHeight)
+    /**
+     * 生成二维码
+     * @param str 二维码内容
+     * @param widthAndHeight 二维码边长
+     * @param color 二维码的颜色
+     * @return
+     * @throws WriterException
+     */
+    public static Bitmap createQRCode(String str, int widthAndHeight ,int color)
             throws WriterException {
         Hashtable<EncodeHintType, String> hints = new Hashtable<EncodeHintType, String>();
         hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
@@ -28,7 +36,7 @@ public class QRFactory {
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 if (matrix.get(x, y)) {
-                    pixels[y * width + x] = BLACK;
+                    pixels[y * width + x] = color;
                 }
             }
         }
@@ -36,6 +44,18 @@ public class QRFactory {
                 Bitmap.Config.ARGB_8888);
         bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
         return bitmap;
+    }
+
+    /**
+     * 已默认的图片格式生成二维码
+     * @param str
+     * @param widthAndHeight
+     * @return
+     * @throws WriterException
+     */
+    public static Bitmap createQRCode(String str, int widthAndHeight)
+            throws WriterException {
+        return createQRCode(str,widthAndHeight,DEFAULT_QRCODE_COLOR);
     }
 //
 //	public static String getQRValue(Bitmap bitmap) {
