@@ -98,7 +98,6 @@ public class DataRecordByAndroid {
 			return defValue;
 		}
 	}
-
 	public boolean remove(String key) {
 		// TODO Auto-generated method stub
 		try {
